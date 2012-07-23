@@ -1,0 +1,27 @@
+.debug {
+  background-color:magenta;
+}
+
+.filmstrip {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  height: 108px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.thumbnail {
+  float: left;
+}
+
+.thumbnail img {
+  width: 144px;
+}
+
+.photo_list {
+  width: 576px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
