@@ -3,8 +3,8 @@ $(document).ready(function(){
   background.initialize();
 
   background.resize();
-  $(window).resize(function(event) {
-    background.resize(event.target.outerWidth, event.target.outerHeight);
+  $(window).resize(function() {
+    background.resize();
   });
   $(window).bind('orientationchange', function() {
     background.resize();
