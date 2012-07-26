@@ -61,23 +61,37 @@ var background = {
     if (this.current_index >= filmstrip.length) {
       this.current_index = 0;
     }
-    this.animate_swipe(1);
+    var directionLeft = 1;
+    this.animate_swipe(directionLeft);
   },
 
   /*
    * Move the images in a sequence such that the user experiences
    * the previous image when they swipe to the right
    *
-   * pre-condition : this.index is valid
-   * post-condition : this.index is valid
+   * pre-condition : this.current_index is valid
+   * post-condition : this.current_index is valid
    */
   swipe_right : function() {
     this.current_index--;
     if (this.current_index < 0) {
       this.current_index = filmstrip.length - 1;
     }
-    this.animate_swipe(-1);
+    var directionRight = -1;
+    this.animate_swipe(directionRight);
   },
+
+  /*
+   * Given a swiped direction, animate_swipe places the new img
+   * in the dom and slides both it and the old image into place,
+   * then removes the old image from the dom.
+   *
+   * Pre-condition: this.current_index was set to the new img by the
+   * function that called it (either swipe_right or swipe_left)
+   *
+   * Takes argument direction, which is 1 if swiping left
+   * and -1 if swiping right.
+   */
 
   animate_swipe : function (direction) {
     var new_img = filmstrip.image_at(this.current_index);
