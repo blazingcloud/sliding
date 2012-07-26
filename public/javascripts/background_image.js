@@ -11,9 +11,7 @@ var BackgroundImage = function(dom, index) {
 
 BackgroundImage.prototype.on_img_ready = function(callback) {
   var inspector = $('<img src="' + this.large_src + '" />');
-  inspector.load(function() {
-    callback();
-  });
+  inspector.load(callback);
 };
 
 BackgroundImage.prototype.make_dom = function () {

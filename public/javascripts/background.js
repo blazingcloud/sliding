@@ -17,12 +17,10 @@ var background = {
   },
 
 
-  resize : function() {
-    this.window_width = $(window).width(); // This is used later
-    this.window_height = $(window).height();
+  resize : function(width, height) {
+    this.window_width = width; // This is used later
+    this.window_height = height;
     this.wrapper.css('height', this.window_height + 'px');
-    //this.wrapper.css('height', '900px');//this.window_height + 'px');
-    //this.wrapper.css('width', '600px'); // this.window_width + 'px');
   },
 
   set_image : function(index) {
@@ -55,8 +53,8 @@ var background = {
    * Move the images in a sequence such that the user experiences
    * the next image when they swipe to the left
    *
-   * pre-condition : this.index is valid
-   * post-condition : this.index is valid
+   * pre-condition : this.current_index is valid
+   * post-condition : this.current_index is valid
    */
   swipe_left : function() {
     this.current_index++;
