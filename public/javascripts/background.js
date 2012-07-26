@@ -17,9 +17,9 @@ var background = {
   },
 
 
-  resize : function() {
-    this.window_width = $(window).width(); // This is used later
-    this.window_height = $(window).height();
+  resize : function(width, height) {
+    this.window_width = width; // This is used later
+    this.window_height = height;
     this.wrapper.css('height', this.window_height + 'px');
   },
 

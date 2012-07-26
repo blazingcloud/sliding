@@ -2,9 +2,10 @@ $(document).ready(function(){
   filmstrip.initialize();
   background.initialize();
 
-  background.resize();
+  background.resize($(window).width(), $(window).height());
+
   $(window).resize(function() {
-    background.resize();
+    background.resize($(window).width(), $(window).height());
   });
   $(window).bind('orientationchange', function() {
     background.resize();
