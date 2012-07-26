@@ -8,7 +8,7 @@ $(document).ready(function(){
     background.resize($(window).width(), $(window).height());
   });
   $(window).bind('orientationchange', function() {
-    background.resize();
+    background.resize($(window).width(), $(window).height());
   });
 });
 
