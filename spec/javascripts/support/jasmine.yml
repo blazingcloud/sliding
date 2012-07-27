@@ -11,6 +11,7 @@
 #   - dist/**/*.js
 #
 src_files:
+    - public/javascripts/vendor/*.js
     - public/javascripts/**/*.js
 
 # stylesheets
@@ -49,6 +50,7 @@ helpers:
 #   - **/*[sS]pec.js
 #
 spec_files:
+  - background_spec.js
 
 # src_dir
 #
