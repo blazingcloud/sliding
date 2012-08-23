@@ -44,7 +44,7 @@ var background = {
         self.current_img_dom.remove();
       }
 
-      // set the current image as the old_img
+      // set the "new" image as the current_img
       self.current_img_dom = new_img_dom;
     });
   },

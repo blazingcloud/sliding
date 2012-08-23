@@ -12,7 +12,12 @@
 #
 src_files:
     - public/javascripts/vendor/*.js
-    - public/javascripts/**/*.js
+    - public/javascripts/touch_listener.js
+    - public/javascripts/background.js
+    - public/javascripts/filmstrip.js
+    - public/javascripts/background_image.js
+    #- public/javascripts/**/*.js
+    #- public/images/**/*.png
 
 # stylesheets
 #
@@ -26,6 +31,9 @@ src_files:
 #   - stylesheets/*.css
 #
 stylesheets:
+  - public/css/reset.css
+  - public/css/smallest.css
+  - public/css/style.css
 
 # helpers
 #
